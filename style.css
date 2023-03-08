@@ -18,3 +18,94 @@ section {
 #galeri .row > * {
   padding: 0;
 }
+
+/* keyboard */
+.keyboard-box {
+  position: relative;
+  background-color: rgb(25, 33, 58);
+  border-radius: 10px;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+
+.keyboard-box::before {
+  content: "MY";
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #fff;
+  font-size: 6em;
+  font-weight: bold;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.7s;
+}
+
+.keyboard-box:hover::before {
+  opacity: 0.2;
+}
+
+.keyboard-box::after {
+  content: "Keyboard";
+  position: absolute;
+  top: 390px;
+  transform: translate(-50%, 0);
+  left: 50%;
+  color: #fff;
+  font-size: 4.2em;
+  font-weight: bold;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.7s;
+}
+
+.keyboard-box:hover::after {
+  opacity: 0.2;
+}
+
+.keyboard-name {
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  opacity: 0;
+  transition: 0.7s;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transform: translate3d(0, 0, 30px);
+}
+
+.keyboard-box:hover .keyboard-name {
+  top: 20px;
+  opacity: 1;
+}
+
+.keyboard-btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 100px);
+  opacity: 0;
+  transition: 0.7s;
+  z-index: 100;
+}
+
+.keyboard-box:hover .keyboard-btn {
+  opacity: 1;
+  bottom: 20px;
+}
+
+.keyboard-img {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  max-width: 350px;
+  transform: translate3d(-50%, 0, 80px );
+  transition: 0.6s;
+  z-index: 2;
+}
+
+.keyboard-box:hover .keyboard-img {
+  transform: translate3d(-50%, 0, 100px) scale(1.2);
+}

@@ -121,6 +121,42 @@
         </div>
       </div>
 
+      <section id="keyboards">
+        <div class="container">
+          <div class="row text-center mb-3">
+            <div class="col">
+              <h2>Key Boards</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="keyboard-box">
+                <h4 class="keyboard-name">Keyboard 1</h4>
+                <img src="img/keyboard.png" alt="keyboard" class="keyboard-img" />
+                <a href="" class="btn btn-light keyboard-btn">show</a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="keyboard-box">
+                <h4 class="keyboard-name">Keyboard 1</h4>
+                <img src="img/keyboard.png" alt="keyboard" class="keyboard-img" />
+                <a href="" class="btn btn-light keyboard-btn">show</a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="keyboard-box">
+                <h4 class="keyboard-name">Keyboard 1</h4>
+                <img src="img/keyboard.png" alt="keyboard" class="keyboard-img" />
+                <a href="" class="btn btn-light keyboard-btn">show</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#f3f4f5"
@@ -294,6 +330,14 @@
             console.log("Success!", response);
           })
           .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+
+    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".keyboard-box"), {
+        max: 25,
+        speed: 1000,
       });
     </script>
   </body>
